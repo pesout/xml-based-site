@@ -1,0 +1,132 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://localhost/zj-seminarka/seminarni_prace.xslt"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://localhost/zj-seminarka/seminarni_prace.xsd">
+
+	<koncerty>
+		<koncert datum="2020-05-02">
+			<kapela>Vypsaná fixa</kapela>
+			<vstupne>250</vstupne>
+		</koncert>
+		<koncert datum="2020-05-04">
+			<kapela>Led Zeppelin Revival</kapela>
+			<vstupne>120</vstupne>
+		</koncert>
+		<koncert datum="2020-05-08">
+			<kapela>Dilemma in Cinema</kapela>
+			<vstupne>180</vstupne>
+		</koncert>
+		<koncert datum="2020-05-09">
+			<kapela>Záviš</kapela>
+			<vstupne>200</vstupne>
+		</koncert>
+		<koncert datum="2020-05-12">
+			<kapela>Nirvana Revival</kapela>
+			<vstupne>130</vstupne>
+		</koncert>
+		<koncert datum="2020-05-15">
+			<kapela>The Silver Spoons</kapela>
+			<vstupne>200</vstupne>
+		</koncert>
+		<koncert datum="2020-05-16">
+			<kapela>Znouzectnost</kapela>
+			<vstupne>250</vstupne>
+		</koncert>
+		<koncert datum="2020-05-18">
+			<kapela>Plexis</kapela>
+			<vstupne>250</vstupne>
+		</koncert>
+		<koncert datum="2020-05-19">
+			<kapela>Visací zámek</kapela>
+			<vstupne>250</vstupne>
+		</koncert>
+		<koncert datum="2020-05-22">
+			<kapela>Schodiště</kapela>
+			<vstupne>180</vstupne>
+		</koncert>
+		<koncert datum="2020-05-23">
+			<kapela>Dilemma in Cinema</kapela>
+			<vstupne>180</vstupne>
+		</koncert>
+		<koncert datum="2020-05-28">
+			<kapela>Krausberry</kapela>
+			<vstupne>200</vstupne>
+		</koncert>
+		<koncert datum="2020-05-29">
+			<kapela>The Fialky</kapela>
+			<vstupne>220</vstupne>
+		</koncert>
+		<koncert datum="2020-05-30">
+			<kapela>Totální nasazení</kapela>
+			<vstupne>250</vstupne>
+		</koncert>
+		<koncert datum="2020-05-31">
+			<kapela>Tragedis</kapela>
+			<vstupne>200</vstupne>
+		</koncert>
+	</koncerty>
+
+	<ukazky>
+		<video youtube_id="OSSjQnAMPmM"/>
+		<video youtube_id="Ez-zxhrGKjs"/>
+		<video youtube_id="1_UWooCAw5Y"/>
+	</ukazky>
+
+	<bar>
+		<alkohol typ="pivo">
+			<napoj cena="38" epm="12">Únětice</napoj>
+			<napoj cena="34" epm="10">Únětice</napoj>
+			<napoj cena="34" epm="11">Hubertus</napoj>
+		</alkohol>
+
+		 <alkohol typ="destilaty_likery">
+			 <napoj cena="30" objem="4">Božkov</napoj>
+			 <napoj cena="100" objem="4">Diplomatico</napoj>
+			 <napoj cena="35" objem="4">Fernet Stock</napoj>
+			 <napoj cena="35" objem="4">Becherovka</napoj>
+			 <napoj cena="50" objem="4">Jägermeister</napoj>
+			 <napoj cena="55" objem="4">Tequila zlatá</napoj>
+			 <napoj cena="55" objem="4">Tequila stříbrná</napoj>
+			 <napoj cena="65" objem="4">Jack Daniels</napoj>
+			 <napoj cena="60" objem="4">Jameson</napoj>
+			 <napoj cena="60" objem="4">Tullamore Dew</napoj>
+			 <napoj cena="55" objem="4">Metaxa *****</napoj>
+		 </alkohol>
+	</bar>
+
+	<info>
+		<oteviraci_doba>
+			<den_v_tydnu den="Pondělí">
+				<od>19:00</od>
+				<do>01:00</do>
+			</den_v_tydnu>	
+			<den_v_tydnu den="Úterý">
+				<od>19:00</od>
+				<do>03:00</do>
+			</den_v_tydnu>	
+			<den_v_tydnu den="Středa">
+				<od>19:00</od>
+				<do>03:00</do>
+			</den_v_tydnu>	
+			<den_v_tydnu den="Čtvrtek">
+				<od>19:00</od>
+				<do>04:00</do>
+			</den_v_tydnu>	
+			<den_v_tydnu den="Pátek">
+				<od>19:00</od>
+				<do>06:00</do>
+			</den_v_tydnu>	
+			<den_v_tydnu den="Sobota">
+				<od>19:00</od>
+				<do>06:00</do>
+			</den_v_tydnu>
+			<den_v_tydnu den="Neděle">
+				<od>19:00</od>
+				<do>01:00</do>
+			</den_v_tydnu>
+		</oteviraci_doba>
+
+		<zacatek_koncertu>20:00</zacatek_koncertu>
+	</info>
+
+</document>
+

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="cas">
+    <xs:restriction base="xs:string">
+      <xs:length value="5"/>
+      <xs:pattern value="[0-2][0-9]:[0-5][0-9]"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="video_id">
+    <xs:restriction base="xs:string">
+	  <xs:length value="11"/>
+    </xs:restriction>
+  </xs:simpleType>    
+  <xs:group name="od_do">
+    <xs:sequence>
+        <xs:element name="od" type="cas" />
+        <xs:element name="do" type="cas" />
+    </xs:sequence>
+  </xs:group>
+  <xs:element name="document">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="koncerty">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="koncert">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="kapela" type="xs:string" />
+                    <xs:element name="vstupne" type="xs:unsignedShort" />
+                  </xs:sequence>
+                  <xs:attribute name="datum" type="xs:date" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+		</xs:element>
+		<xs:element name="ukazky">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="video">
+                <xs:complexType>
+                  <xs:attribute name="youtube_id" type="video_id" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bar">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="alkohol">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="napoj">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="cena" type="xs:unsignedShort" use="required" />
+                            <xs:attribute name="epm" type="xs:unsignedShort" use="optional" />
+                            <xs:attribute name="objem" type="xs:unsignedShort" use="optional" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="typ" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="info">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="oteviraci_doba">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="den_v_tydnu">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:group ref="od_do" />
+                        </xs:sequence>
+                        <xs:attribute name="den" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="zacatek_koncertu" type="cas" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
